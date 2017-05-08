@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <script src="js/jquery-3.2.1.js"</script>
+  <script src="js/jquery-3.2.1.js"></script>
   <script src="js/scripts.js"></script>
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/styles.css">
@@ -10,14 +10,18 @@
   <body>
   <div class="container">
     <h1>Places You've Been</h1>
-    <div id="locationTitle">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Enter the following info: </h2>
+
+      <form id="allForms">
       <div class="form-group">
-        <label for="location">Place</label>
+        <label for="location">Location</label>
         <input type="text" class="form-control" id="location">
       </div>
       <div class="form-group">
         <label for="location">Landmarks</label>
-        <input type="text" class="form-control" id="landMarks">
+        <input type="text" class="form-control" id="landmarks">
       </div>
       <div class="form-group">
         <label for="location">Season</label>
@@ -32,10 +36,23 @@
         <input type="text" class="form-control" id="notes">
       </div>
         <button type="submit" name="submit">submit</button>
-    </div>
-    <div class="output">
+      </form>
+      <ul id="Places">
 
+      </ul>
+
+    <div class="output">
+      <p class= "location"></p>
+      <p class= "landmarks"></p>
+      <p class= "season"></p>
+      <p class= "activities"></p>
+      <p class= "notes"></p>
+
+
+
+      </div>
+        </div>
+      </div>
     </div>
-  </div>
   </body>
 </html>
