@@ -23,16 +23,16 @@ $(document).ready(function() {
     var inputtedNotes = $("input#notes").val();
     var location = new placesMine(inputtedLocation, inputtedLandmarks, inputtedSeason, inputtedActivities, inputtedNotes);
 
-    $("ul#Places").append("<li><span class='location'>" + location.locale + "</span></li>");
+    $("ul#Places").append("<li><span class='location-click'>" + location.locale + "</span></li>");
+    $(".location-click").last().click(function(){
+      $(".output").show();
+      $("#show-location p").text(location, landmarks, season, activities, notes)
+      $(".location").text(location.locale);
+      $(".landmarks").text(location.landmarks);
+      $(".season").text(location.season);
+      $(".activities").text(location.activities);
+      $(".notes").text(location.notes);
+    });
   });
 
-  $("location").last().click(function(){
-    $("#show-location").show();
-    $("#show-location p").text(location, landmarks, season, activities, notes)
-    $(".location").text(inputtedLocation.locale);
-    $(".landmarks").text(inputtedLandmarks.landmarks);
-    $(".season").text(inputtedSeason.season);
-    $(".activities").text(inputtedActivities.activities);
-    $(".notes").text(inputtedNotes.notes);
-  });
 });
